@@ -184,8 +184,13 @@ html[data-theme="dark"] .theme-toggle .i-sun{display:block}
 @media(max-width:860px){
   .hero{padding:56px 0 48px}
   .hero-grid{grid-template-columns:1fr;text-align:left}
-  .hero-portrait{justify-content:flex-start;margin-top:28px}
-  .portrait-frame{width:180px;height:180px;border-radius:20px}
+  .hero-copy{display:contents}
+  .eyebrow-role{order:1}
+  .hero h1{order:2}
+  .hero-portrait{order:3;justify-content:flex-start;width:fit-content;margin:24px auto 32px}
+  .hero p.lead{order:4}
+  .hero-actions{order:5}
+  .portrait-frame{width:220px;height:220px;border-radius:20px}
   .portrait-badge{font-size:12px;padding:8px 12px;bottom:-14px;left:-10px}
 }
 @media(max-width:480px){
@@ -198,6 +203,7 @@ html[data-theme="dark"] .theme-toggle .i-sun{display:block}
 section{padding:76px 0}
 .section-head{margin-bottom:40px;max-width:60ch}
 .section-tag{font-size:13px;font-weight:600;color:var(--blue);margin-bottom:10px}
+.section-tag-education{font-size:clamp(22px,3.4vw,30px);font-weight:700;color:var(--ink);margin-bottom:0}
 .section-head h2{font-size:clamp(24px,3.4vw,32px);color:var(--ink)}
 .section-sub{color:var(--ink-soft);margin-top:10px;font-size:15.5px}
 
@@ -487,7 +493,7 @@ footer{padding:28px 0 48px;text-align:center;color:var(--ink-soft);font-size:13.
 
 <section class="hero">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-copy">
       <div class="eyebrow-role">Développeur Web &amp; Réseaux · Étudiant en L3 à l'ENI</div>
       <h1>Je conçois des applications qui font tenir ensemble le web, le logiciel et le réseau.</h1>
       <p class="lead">Étudiant en troisième année à l'École Nationale d'Informatique, je construis des applications web et desktop et j'aime autant écrire du code que faire tenir un réseau debout. À la recherche d'un stage pour mettre ces deux mondes au service d'un projet concret.</p>
@@ -931,8 +937,7 @@ footer{padding:28px 0 48px;text-align:center;color:var(--ink-soft);font-size:13.
 <section id="education">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-tag">Formation</div>
-      <h2>Parcours à l'École Nationale d'Informatique.</h2>
+      <div class="section-tag section-tag-education">Formation</div>
     </div>
     <div class="edu-list">
       <div class="edu-row">
